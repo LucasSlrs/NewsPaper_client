@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/article.css";
 // import ButtonAdd from "../components/ButtonAdd";
 // import axios from "axios";
 
@@ -7,8 +8,8 @@ class Article extends React.Component {
     const extractInformation = this.props.location.info;
     // console.log("REPONSE", this.props.location.info);
     return (
-      <div>
-        <h1>Article</h1>
+      <div className="allInfo">
+        <h2>Article</h2>
         <img
           src={extractInformation.image}
           alt={this.props.location.info.name}

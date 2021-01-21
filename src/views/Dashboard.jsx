@@ -2,6 +2,7 @@ import React from "react";
 import apiHandler from "../api/apiHandler";
 import DisplayArticles from "../components/DisplayArticles";
 import UserContext from "../components/Auth/UserContext";
+import "../styles/dashboard.css";
 
 class Dashboard extends React.Component {
   static contextType = UserContext;
@@ -32,10 +33,10 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <h1>My Dashboard</h1>
+        <h2>My Dashboard</h2>
         {this.state.articles.map((article) => {
           return (
-            <div>
+            <div className="divGeneral" key={article.id}>
               <img
                 src={article.image}
                 onError={(e) => {
@@ -45,17 +46,20 @@ class Dashboard extends React.Component {
                 }}
                 alt="Article"
               />
-              <div>
-                <h2>{article.title}</h2>
+              <div className="description">
+                <h3>{article.title}</h3>
                 <p>{article.description}</p>
                 <p>{article.author}</p>
                 <a href={article.url} target="_blank" rel="noopener noreferrer">
                   link of the article
                 </a>
-                <button onClick={() => this.handleClick(article.id)}>
-                  DELETE
-                </button>
               </div>
+              <button
+                className="btn-delete"
+                onClick={() => this.handleClick(article.id)}
+              >
+                Delete this article
+              </button>
             </div>
           );
         })}
