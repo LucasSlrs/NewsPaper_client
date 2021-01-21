@@ -1,0 +1,21 @@
+.NavMain {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+  background-color: black;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* justify-content: center; */
+}
+
+/* .NavMain .logo{
+  font-size: 30px;
+} */
+
+.NavMain a {
+  color: white;
+  text-decoration: none;
+}
