@@ -15,15 +15,8 @@ text-decoration: none;
 } */
 
 .description a {
-  color: white;
-  text-decoration: none;
-  background: black;
+  color: #5d5a6d;
   padding: 5px;
-}
-
-.description a:hover{
-  background: white;
-  color: black;
 }
 
 .btn-delete {
