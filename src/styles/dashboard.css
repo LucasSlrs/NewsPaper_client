@@ -9,9 +9,21 @@
     margin: inherit;
 }
 
-.description a{
+/* .description a{
     color: black;
 text-decoration: none;
+} */
+
+.description a {
+  color: white;
+  text-decoration: none;
+  background: black;
+  padding: 5px;
+}
+
+.description a:hover{
+  background: white;
+  color: black;
 }
 
 .btn-delete {
