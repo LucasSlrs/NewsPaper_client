@@ -1,6 +1,6 @@
 import React from "react";
 import apiHandler from "../api/apiHandler";
-import DisplayArticles from "../components/DisplayArticles";
+// import DisplayArticles from "../components/DisplayArticles";
 import UserContext from "../components/Auth/UserContext";
 import "../styles/dashboard.css";
 
@@ -19,7 +19,7 @@ class Dashboard extends React.Component {
   }
 
   handleClick = (id) => {
-    console.log("ARTICLE", id);
+    // console.log("ARTICLE", id);
     apiHandler
       .deleteArticle(id)
       .then((data) => {

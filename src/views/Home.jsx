@@ -1,7 +1,7 @@
 import React from "react";
 import TableNews from "../components/TableNews";
-import { Switch, Route } from "react-router-dom";
-import Signup from "./Signup";
+// import { Switch, Route } from "react-router-dom";
+// import Signup from "./Signup";
 import UserContext from "../components/Auth/UserContext";
 
 class Home extends React.Component {

@@ -14,19 +14,18 @@ class TableNews extends Component {
   };
 
   handleSelect = (e) => {
-    console.log("selected", e.target.value);
+    // console.log("selected", e.target.value);
     this.setState({
       selectValue: e.target.value,
     });
     e.preventDefault();
-    // let valueSelected = this.state.selectValue;
-    console.log("SELECTION", e.target.value);
+    // console.log("SELECTION", e.target.value);
     axios
       .get(
         `https://api.currentsapi.services/v1/search?language=${e.target.value}&apiKey=vUAL2v06nYO7IMpRBTeP31MLtxRms900C_Q1CiUo-bWM1st9`
       )
       .then((responseFromApi) => {
-        console.log("response from api", responseFromApi);
+        // console.log("response from api", responseFromApi);
         this.setState({
           infos: responseFromApi.data.news,
         });
@@ -42,7 +41,7 @@ class TableNews extends Component {
     apiHandler
       .transferArticle(article)
       .then((data) => {
-        console.log(`data:`, data);
+        // console.log(`data:`, data);
       })
       .catch((error) => {
         console.log(error);
@@ -50,7 +49,7 @@ class TableNews extends Component {
   };
 
   handleChange = (event) => {
-    console.log("ICI", event.target.value);
+    // console.log("ICI", event.target.value);
     this.setState({
       searchInfo: event.target.value,
     });
@@ -59,13 +58,13 @@ class TableNews extends Component {
   handleSearch = (event) => {
     event.preventDefault();
     let searchNews = this.state.searchInfo;
-    console.log("SEARCH", searchNews);
+    // console.log("SEARCH", searchNews);
     axios
       .get(
         `https://api.currentsapi.services/v1/search?keywords=${searchNews}&apiKey=vUAL2v06nYO7IMpRBTeP31MLtxRms900C_Q1CiUo-bWM1st9`
       )
       .then((responseFromApi) => {
-        console.log("response from api ->", responseFromApi);
+        // console.log("response from api ->", responseFromApi);
         this.setState({
           infos: responseFromApi.data.news,
           searchInfo: "",
