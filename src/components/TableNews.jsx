@@ -138,6 +138,7 @@ class TableNews extends Component {
                 alt="Article"
               />
               <Link
+                className="title-link"
                 to={{
                   pathname: `/article/${info.id}`,
                   info,
@@ -149,7 +150,7 @@ class TableNews extends Component {
                 className="btn-add"
                 onClick={() => this.handleClickBtn(info)}
               >
-                Add this article
+                Add to dashboard
               </button>
             </div>
           );

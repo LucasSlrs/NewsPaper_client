@@ -32,7 +32,7 @@ select {
   text-align-last: center;
 }
 .div-by-div {
-  border: 2px solid black;
+  border: 2px solid #5d5a6d;
   margin: 5% 2%;
   border-radius: 25px;
   box-shadow: 10px 8px 10px #08063a75;
@@ -88,4 +88,8 @@ select {
   transition: transform 0.5s;
   transform-origin: bottom right;
   transform: scale(0);
+}
+.title-link {
+  text-decoration: none;
+  color: #5d5a6d;
 }
